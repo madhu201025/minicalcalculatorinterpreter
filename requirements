@@ -1,0 +1,10 @@
+A mini calculator interpreter project on GitHub, often used as a learning exercise in compiler/interpreter design, typically requires the following components and features.
+Core Requirements1. Structure and DesignSource Code Repository: Hosted on GitHub with a clear structure (e.g., separate directories for the lexer, parser, interpreter, tests, etc.).Language Choice: Implementable in a language suitable for parsing, such as Python.
+Documentation: A clear $\text{README.md}$ explaining the project's purpose, how to build/run it, and the grammar it supports.
+Basic Pipeline ComponentsThe interpreter must process the input in distinct stages:Lexer (Scanner):Reads the input string (the mathematical expression).Tokenizes the input, converting character sequences into meaningful symbols (tokens) like NUMBER, PLUS, MINUS, IDENTIFIER, EOF (End of File), etc.
+Parser:Takes the stream of tokens from the lexer.Checks if the sequence of tokens follows the defined Grammar (e.g., using Recursive Descent or a similar technique).
+Outputs an Abstract Syntax Tree (AST), which is a tree representation of the expression's structure.
+Interpreter/Evaluator:Traverses the AST (e.g., using post-order traversal).Performs the actual calculations based on the operators and operands defined in the AST nodes.
+Functional Requirements (Features)Arithmetic Operations: Support for the four basic mathematical operations: addition (+), subtraction (-), multiplication (times or *), and division (/).Operator Precedence: Must correctly handle the order of operations (e.g., multiplication and division before addition and subtraction).
+Parentheses: Support for nested parentheses to override default precedence (e.g., $(2 + 3) \times 4$).
+Integers and Decimals: Must handle both whole numbers and floating-point numbers.
